@@ -1,15 +1,23 @@
 <?php get_header(); ?>
-<?php get_sidebar(); ?>
 
-<div id="wrapper" class="clearfix" > 
-<div id="maincol" >
+<div id="wrapper" class="container">
 
+    <div class="row">
 
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            <img width='100%' src="<?php bloginfo('template_directory'); ?>/not-found.jpg" />
+        </div>
 
+        <div class="col-md-4 col-sm-4 col-xs-12 sidebar-right">
+            <?php get_sidebar(); ?>
+        </div>
 
-<h2 class="contentheader">Error 404 - Page not found!</h2>
-<p>The page you trying to reach does not exist, or has been moved. Please use the menus or the search box to find what you are looking for.</p>
+    </div>
+
+    <div class="row">
+        <?php get_footer(); ?>
+    </div>
 
 </div>
-</div>
-<?php get_footer(); ?>
+
+

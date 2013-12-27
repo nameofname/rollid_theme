@@ -3,6 +3,7 @@
     font-size: 60px;
     font-weight: bolder;
     text-align: right;
+    position: fixed;
 }
 
 .sidebar-right #sidebar {
@@ -30,4 +31,13 @@
 
 .magenta {
     color : magenta;
+}
+
+.content {
+    margin-bottom: 50px;
+}
+
+.content-heading {
+    color: #ccc;
+    margin-bottom: 20px;
 }
