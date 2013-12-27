@@ -1,0 +1,22 @@
+#sidebar {
+    list-style: none;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.sidebar-right #sidebar {
+    text-align: left;
+}
+
+#sidebar a {
+    color: black;
+}
+
+#sidebar a.active {
+    color: magenta;
+}
+
+#sidebar a:hover {
+    text-decoration: none;
+}
