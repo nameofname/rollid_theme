@@ -20,3 +20,12 @@
 #sidebar a:hover {
     text-decoration: none;
 }
+
+#home-text {
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+.magenta {
+    color : magenta;
+}
