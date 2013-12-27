@@ -1,6 +1,6 @@
 <?php
 
-include('blog.php');
+include('page-blog.php');
 
 ?>
 

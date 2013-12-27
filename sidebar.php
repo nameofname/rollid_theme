@@ -4,7 +4,7 @@
     global $wp_query;
     $curr_id = $wp_query->post->ID;
 
-    $pages_arr = get_pages();
+    $pages_arr = get_pages(	array('sort_column' => 'menu_order'));
 
     foreach($pages_arr as $key=>$page) {
         $name = $page->post_title;
