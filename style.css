@@ -35,7 +35,7 @@
     font-size: 100px;
     line-height: 100px;
     font-weight: bolder;
-    text-align: justify;
+    text-align: right;
 }
 
 #home-text .line-1 {letter-spacing: 5px; }
@@ -43,6 +43,13 @@
 #home-text .line-3 {letter-spacing: 0px; }
 #home-text .line-4 {letter-spacing: 0px; }
 #home-text .line-5 {letter-spacing: 12px; }
+/* Left align the "ins" */
+#home-text .line-5 span {
+    float: left;
+}
+#home-text .line-5 .magenta {
+    margin-left: 67px;
+}
 
 .magenta {
     color : #F50C75;

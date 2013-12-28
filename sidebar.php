@@ -21,7 +21,7 @@
         $page_id = $page->ID;
 
         // If the name is "home" - then switch it to a home icon
-        $name = ($name === 'home') ? "<i class='fa fa-home'></i>" : $name;
+//        $name = ($name === 'home') ? "<i class='fa fa-home'></i>" : $name;
 
         if ($curr_id === $page_id) {
             echo "<li><a class='active' href='$link'>$name</a><br /></li>";
