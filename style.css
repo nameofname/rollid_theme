@@ -10,50 +10,24 @@
     position: fixed;
 }
 
-.home-text{
+#home-text{
+    max-width: 500px;
+    float: right;
     font-size: 100px;
     line-height: 100px;
     font-weight: bolder;
     text-align: right;
 }
 
-.home-text span {
-    float: left;
-}
-
 .line {
-    display: inline-flex;
-    justify-content: center;
-}
-.line span {
-    /*flex: 1 1 30%;*/
+    display: flex;
+    justify-content: space-between;
 }
 
-
-/*.home-text .line-1 {letter-spacing: 5px; }*/
-/*.home-text .line-2 {letter-spacing: 7px; }*/
-/*.home-text .line-3 {letter-spacing: 0px; }*/
-/*.home-text .line-4 {letter-spacing: 0px; }*/
-/*.home-text .line-5 {letter-spacing: 12px; }*/
-/* Left align the "ins" */
-/*.home-text .line-5 span {*/
-    /*float: left;*/
-/*}*/
-/*.home-text .line-5 .magenta {*/
-    /*margin-left: 67px;*/
-/*}*/
-
-/*#home-text-lg {font-size: 100px;}*/
-/*#home-text-md {font-size: 60px;}*/
-/*#home-text-sm {font-size: 40px;}*/
-/*#home-text-xs {font-size: 30px;}*/
-
-
-
-
-
-
-
+.line-5 {
+    display: flex;
+    justify-content: flex-start;
+}
 
 
 /* On the home page, move the sidebar links closer to the text */

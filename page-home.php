@@ -47,15 +47,33 @@
                     <span class="magenta">L</span>
                     <span class="magenta">L</span>
                 </div>
-                <div class="line line-4">
+                <div class="line line-5">
                     <span class="magenta">I</span>
                     <span class="magenta">N</span>
                     <span class="magenta">S</span>
                     <span>.</span>
                 </div>
 
-            </div>
 
+
+
+                <!-- Test to see if I could use content-justify -->
+
+<!--                <div class="line line-1">-->
+<!--                    WEBSITE-->
+<!--                </div>-->
+<!--                <div class="line line-2">-->
+<!--                    OF AUTH-->
+<!--                </div>-->
+<!--                <div class="line line-3">-->
+<!--                    OR DANIE-->
+<!--                </div>-->
+<!--                <div class="line line-4">-->
+<!--                    LLE ROLL-->
+<!--                </div>-->
+<!--                <div class="line line-5">-->
+<!--                    INS.-->
+<!--                </div>-->
 
             <!-- Visible on large devices -->
 <!--            <div id="home-text" class="home-text visible-lg">-->
@@ -89,6 +107,8 @@
 <!--                <div class="line-4"><span class="magenta">LLE ROLL </span></div>-->
 <!--                <div class="line-5"><span class="magenta">INS</span><span>.</span></div>-->
 <!--            </div>-->
+
+            </div>
 
         </div>
 
