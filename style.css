@@ -1,9 +1,17 @@
+#wrapper {
+    margin-top: 50px;
+}
+
 #sidebar {
     list-style: none;
     font-size: 60px;
     font-weight: bolder;
     text-align: right;
     position: fixed;
+}
+
+#sidebar {
+    -webkit-padding-start: 0px;
 }
 
 .sidebar-right #sidebar {
@@ -15,22 +23,29 @@
 }
 
 #sidebar a.active {
-    color: magenta;
+    color: #F50C75;
 }
 
 #sidebar a:hover {
     text-decoration: none;
-    color: magenta;
+    color: #F50C75;
 }
 
 #home-text {
     font-size: 100px;
+    line-height: 100px;
     font-weight: bolder;
-    text-align: right;
+    text-align: justify;
 }
 
+#home-text .line-1 {letter-spacing: 5px; }
+#home-text .line-2 {letter-spacing: 7px; }
+#home-text .line-3 {letter-spacing: 0px; }
+#home-text .line-4 {letter-spacing: 0px; }
+#home-text .line-5 {letter-spacing: 12px; }
+
 .magenta {
-    color : magenta;
+    color : #F50C75;
 }
 
 .content {
