@@ -8,7 +8,7 @@
             <?php get_sidebar(); ?>
         </div>
 
-        <div class="col-md-9 col-sm-9 col-xs-12">
+        <div id="page-content" class="col-md-9 col-sm-9 col-xs-12">
             <?php
 
             $page_data = get_page($page_id);
