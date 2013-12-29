@@ -4,9 +4,12 @@
 
     <div id="home" class="row">
 
-        <div class="col-md-2 col-sm-2 col-xs-12"><!-- This div provided to fill space to the left. --></div>
 
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <?php get_sidebar(); ?>
+        </div>
+
+        <div class="col-md-8 col-sm-8 col-xs-12">
 
             <div id="home-text" class="home-text">
 
@@ -56,64 +59,8 @@
 
 
 
-
-                <!-- Test to see if I could use content-justify -->
-
-<!--                <div class="line line-1">-->
-<!--                    WEBSITE-->
-<!--                </div>-->
-<!--                <div class="line line-2">-->
-<!--                    OF AUTH-->
-<!--                </div>-->
-<!--                <div class="line line-3">-->
-<!--                    OR DANIE-->
-<!--                </div>-->
-<!--                <div class="line line-4">-->
-<!--                    LLE ROLL-->
-<!--                </div>-->
-<!--                <div class="line line-5">-->
-<!--                    INS.-->
-<!--                </div>-->
-
-            <!-- Visible on large devices -->
-<!--            <div id="home-text" class="home-text visible-lg">-->
-<!--                <div class="line-1">WEBSITE </div>-->
-<!--                <div class="line-2">OF AUTH </div>-->
-<!--                <div class="line-3">OR <span class="magenta">DANIE </span></div>-->
-<!--                <div class="line-4"><span class="magenta">LLE ROLL </span></div>-->
-<!--                <div class="line-5"><span class="magenta">INS</span><span>.</span></div>-->
-<!--            </div>-->
-<!---->
-<!--            <div id="home-text-md" class="home-text visible-md">-->
-<!--                <div class="line-1">WEBSITM </div>-->
-<!--                <div class="line-2">OF AUTH </div>-->
-<!--                <div class="line-3">OR <span class="magenta">DANIE </span></div>-->
-<!--                <div class="line-4"><span class="magenta">LLE ROLL </span></div>-->
-<!--                <div class="line-5"><span class="magenta">INS</span><span>.</span></div>-->
-<!--            </div>-->
-<!---->
-<!--            <div id="home-text-sm" class="home-text visible-sm">-->
-<!--                <div class="line-1">WEBSITM </div>-->
-<!--                <div class="line-2">OF AUTH </div>-->
-<!--                <div class="line-3">OR <span class="magenta">DANIE </span></div>-->
-<!--                <div class="line-4"><span class="magenta">LLE ROLL </span></div>-->
-<!--                <div class="line-5"><span class="magenta">INS</span><span>.</span></div>-->
-<!--            </div>-->
-<!---->
-<!--            <div id="home-text-xs" class="home-text visible-xs">-->
-<!--                <div class="line-1">WEBSITM </div>-->
-<!--                <div class="line-2">OF AUTH </div>-->
-<!--                <div class="line-3">OR <span class="magenta">DANIE </span></div>-->
-<!--                <div class="line-4"><span class="magenta">LLE ROLL </span></div>-->
-<!--                <div class="line-5"><span class="magenta">INS</span><span>.</span></div>-->
-<!--            </div>-->
-
             </div>
 
-        </div>
-
-        <div class="col-md-4 col-sm-4 col-xs-12 sidebar-right">
-            <?php get_sidebar(); ?>
         </div>
 
     </div>
