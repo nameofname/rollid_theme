@@ -4,12 +4,7 @@
 
     <div id="home" class="row">
 
-
-        <div class="col-md-4 col-sm-4 col-xs-12a">
-            <?php get_sidebar(); ?>
-        </div>
-
-        <div class="col-md-8 col-sm-8 col-xs-12">
+        <div class="col-md-8 col-sm-8 col-xs-12  pull-right">
 
             <div id="home-text" class="home-text">
 
@@ -61,6 +56,10 @@
 
             </div>
 
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12a pull-left">
+            <?php get_sidebar(); ?>
         </div>
 
     </div>
