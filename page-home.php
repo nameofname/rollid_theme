@@ -5,7 +5,7 @@
     <div id="home" class="row">
 
 
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-12a">
             <?php get_sidebar(); ?>
         </div>
 
@@ -65,10 +65,15 @@
 
     </div>
 
-    <div class="row">
-        <?php get_footer(); ?>
-    </div>
 
 </div>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        var newSize = ($('.line-3 span').eq(1).height() / 100) * 90; /* 90% of container */
+        console.log('newSize ', newSize );
+        $('p').css('font-size', newSize);
+    };
+</script>
 
+<?php get_footer(); ?>
