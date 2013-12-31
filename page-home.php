@@ -68,12 +68,4 @@
 
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        var newSize = ($('.line-3 span').eq(1).height() / 100) * 90; /* 90% of container */
-        console.log('newSize ', newSize );
-        $('p').css('font-size', newSize);
-    };
-</script>
-
 <?php get_footer(); ?>
