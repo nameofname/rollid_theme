@@ -7,6 +7,9 @@
     font-size: 40px;
     font-weight: bolder;
     text-align: right;
+}
+
+#home #sidebar {
     line-height: 84px;
 }
 
@@ -47,7 +50,7 @@
     color: black;
 }
 
-#sidebar a.active {
+#sidebar li.current_page_item a {
     color: #F50C75;
 }
 
