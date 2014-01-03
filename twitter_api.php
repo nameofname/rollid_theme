@@ -48,6 +48,11 @@ Class Twitter_API {
             $this->connection = new TwitterOAuth($this->consumer_key, $this->consumer_secret);
         }
 
+        // Set the timeout for getting the last tweet to something low. Don't want our site speed to suffer if they
+        // are down / having network problems ;)
+        $this->connection->connecttimeout = 5;
+        $this->connection->timeout = 5;
+
         $curr_time = time();
 
         // Get the last tweet data:
@@ -75,9 +80,7 @@ Class Twitter_API {
             'count'=>1
         );
 
-        // TODO : Set a timeout so our site doesn't go down if twitter does.
-        // TODO : In that case, return the last tweet.
-
+//        echo 'accessing twitter...<br>';
         // Use the twitter Oauth plugin to get the last tweet:
         $response = $this->connection->get($this->user_timeline, $params);
 
@@ -104,11 +107,10 @@ Class Twitter_API {
                 return $new_tweet;
             }
 
-        } else {
-
-            // Gracefully degrade by returning the last tweet:
-            return $last_tweet_data;
         }
+
+        // If anything above goes wrong, just return the last tweet.
+        return $last_tweet_data;
     }
 
 }
