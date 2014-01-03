@@ -64,6 +64,11 @@
     margin-top: 20px;
 }
 
+.tweet {
+    font-size: 18px;
+    margin-left: 15px;
+}
+
 .magenta {
     color : #F50C75;
 }

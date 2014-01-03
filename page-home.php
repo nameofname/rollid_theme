@@ -67,4 +67,6 @@
 
 </div>
 
+<?php include_once('last_tweet.php'); ?>
+
 <?php get_footer(); ?>

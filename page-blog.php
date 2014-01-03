@@ -25,9 +25,13 @@
             <?php endwhile; ?>
 
                 <div class="navigation">
-                    <span class="prevlink"><i class="fa fa-arrow-left"></i> <?php next_posts_link('Previous entries') ?></span>
+                    <span class="prevlink">
+                        <?php next_posts_link('<i class="fa fa-arrow-left"></i>Previous entries') ?>
+                    </span>
                     <i class="fa fa-rocket"></i>
-                    <span class="nextlink"><?php previous_posts_link('Next entries') ?> <i class="fa fa-arrow-right"></i></span>
+                    <span class="nextlink">
+                        <?php previous_posts_link('Next entries <i class="fa fa-arrow-right"></i>') ?>
+                    </span>
                 </div>
 
 
