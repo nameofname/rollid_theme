@@ -1,6 +1,21 @@
     <div class="row">
         <div class="col-md-12">
-<!--                footing the ...er-->
+            <?php
+
+            require('twitter_api.php');
+
+            $twitter_config = array(
+                'key'=>TWITTER_KEY,
+                'secret'=>TWITTER_SECRET,
+            );
+
+            $thing = new Twitter_API($twitter_config);
+
+            $tweet = $thing->get_tweet();
+
+            die(var_dump($tweet));
+
+            ?>
         </div>
     </div>
 
