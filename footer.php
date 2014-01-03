@@ -13,7 +13,7 @@
 
             $tweet = $thing->get_tweet();
 
-            die(var_dump($tweet));
+            die(json_encode($tweet));
 
             ?>
         </div>

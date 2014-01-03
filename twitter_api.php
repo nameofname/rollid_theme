@@ -21,9 +21,7 @@ Class Twitter_API {
     private $var_time = 'tweet_time';
     private $var_tweet = 'tweet_data';
 
-
     // Endpoints:
-//    private $oauth_endpoint = 'https://api.twitter.com/oauth2/token';
     private $user_timeline = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 
 
@@ -33,29 +31,9 @@ Class Twitter_API {
         if (!isset($config['key']) || !isset($config['secret'])) {
             throw new ErrorException('You must have a valid configuration to use the twitter api class.');
         }
-        $this->consumer_key = $config->key;
-        $this->consumer_secret = $config->secret;
-    }
 
-
-    /**
-     * Uses 3rd party library to get authorization token from twitter:
-     * This function is now deemed useless.
-     * @deprecated
-     */
-    private function _get_auth_token () {
-//        if (!isset($this->connection)) {
-//            $this->connection = new TwitterOAuth($this->consumer_key, $this->consumer_secret);
-//        }
-//
-//        $response = $this->connection->getRequestToken('');
-//
-//        if (!isset($response['oauth_token']) || !isset($response['oauth_token_secret'])) {
-//            return;
-//        }
-//
-//        $this->oauth_token_secret = $response['oauth_token'];
-//        $this->oauth_token = $response['oauth_token_secret'];
+        $this->consumer_key = $config['key'];
+        $this->consumer_secret = $config['secret'];
     }
 
 
@@ -71,52 +49,66 @@ Class Twitter_API {
         }
 
         $curr_time = time();
-        // Get the time of the last successful request. If it was over 15 minutes ago, then retrieve the tweets.
+
+        // Get the last tweet data:
+        $last_tweet_data = get_option($this->var_tweet);
+
+        // Normalize the last tweet data output to an empty string if it is not there or whatever reason:
+        if (is_null($last_tweet_data) || !$last_tweet_data) {
+            $last_tweet_data = '';
+        }
+
         // Add the time option (does nothing if the option already exists):
-        $added = add_option($this->var_time, $curr_time, '', 'yes');
+        add_option($this->var_time, $curr_time, '', 'yes');
+
+        // Get the time of the last successful request. If it was over 15 minutes ago, then retrieve the tweets.
         $tweet_time = get_option($this->var_time);
 
-        // TODO : convert milliseconds to 15 minutes to get correct cacheing time.
-        if (($curr_time - $tweet_time) > 15) {
-            // GET THE LAST TWEET DATA:
-            $last_tweet_data = get_option($this->var_tweet);
+        if (($curr_time - $tweet_time) < 900) {
             if (!is_null($last_tweet_data)) {
-//                die(var_dump($tweet_time, $curr_time));
-
                 return $last_tweet_data;
             }
         }
 
         $params = array(
             'screen_name'=>$this->screen_name,
-            'count'=>2
+            'count'=>1
         );
 
-        $response = $this->connection->get($this->user_timeline, $params);
+        // TODO : Set a timeout so our site doesn't go down if twitter does.
+        // TODO : In that case, return the last tweet.
 
-        echo 'nerp<br>';
-        die(json_encode($response));
+        // Use the twitter Oauth plugin to get the last tweet:
+        $response = $this->connection->get($this->user_timeline, $params);
 
         if ($response) {
 
             // If the response was an error, do nothing:
-            $is_error = $response['error'] ? true : false;
+            $is_error = isset($response->errors) ? true : false;
             if ($is_error) {
-                return;
+                return '';
             }
-            // Store the time of the successful request:
-            // Add the option (does nothing if the option already exists):
-            $added = add_option($this->var_tweet, $response, '', 'yes');
-            // Update the option:
-            $updated = update_option($this->var_tweet, $response);
 
-            return $response;
+            // Get the text data from the tweet:
+            if (isset($response[0]->text)) {
+                $new_tweet = $response[0]->text;
+
+                // Store the time of the successful request:
+                // Add  + update the option (does nothing if the option already exists):
+                add_option($this->var_tweet, $new_tweet, '', 'yes');
+                update_option($this->var_tweet, $new_tweet);
+
+                // Update the time of the last tweet stored:
+                update_option($this->var_time, $curr_time);
+
+                return $new_tweet;
+            }
 
         } else {
-            // Gracefully degrade by returning an empty string.
-            return '';
-        }
 
+            // Gracefully degrade by returning the last tweet:
+            return $last_tweet_data;
+        }
     }
 
 }
