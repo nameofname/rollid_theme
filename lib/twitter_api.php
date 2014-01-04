@@ -5,7 +5,7 @@
  * Time: 3:51 PM
  */
 
-require('twitteroauth/twitteroauth.php');
+require(THEME_ROOT . '/lib/twitteroauth/twitteroauth.php');
 
 
 Class Twitter_API {

@@ -67,6 +67,13 @@
 
 </div>
 
-<?php include_once('last_tweet.php'); ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+            <?php include_once('inc/last_tweet.php'); ?>
+        </div>
+    </div>
+</div>
 
 <?php get_footer(); ?>

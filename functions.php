@@ -1,5 +1,7 @@
 <?php
 
+// DEFINE global variable THEME_ROOT to make requiring files easier:
+define(THEME_ROOT, realpath(__DIR__));
 
 function piss_off() {
     $out = "this is the output of this functin";
@@ -14,7 +16,6 @@ function ronald_widgets_init() {
 
     register_sidebar( array(
         'name' => 'Sidebar',
-//        'id' => 'sidebar',
         'before_widget' => '<div>',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="rounded">',
@@ -22,3 +23,4 @@ function ronald_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'ronald_widgets_init' );
+
