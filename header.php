@@ -7,7 +7,6 @@
     <meta http-equiv="content-type" content="text/html; charset=<?php bloginfo('charset'); ?>" />
     <meta name="description" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" />
     <meta name="keywords" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" />
-    <?php wp_head(); ?>
 
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
@@ -17,6 +16,9 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/styles/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/styles/fa/css/font-awesome.css" />
+
+    <!-- wp_head() inserts several script tags. I would love them to be at the end of the document but damn wordpress...-->
+    <?php wp_head(); ?>
 
 </head>
 
