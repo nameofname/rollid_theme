@@ -13,4 +13,4 @@ $tweet = $twitter->get_tweet();
 
 ?>
 
-<i class="fa fa-twitter fa-3x"></i><span class="tweet"><?php echo $tweet; ?></span>
+<i class="fa fa-twitter fa-3x"></i><div class="tweet"><?php echo $tweet; ?></div>
