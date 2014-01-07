@@ -13,4 +13,6 @@ $tweet = $twitter->get_tweet();
 
 ?>
 
-<i class="fa fa-twitter fa-3x"></i><div class="tweet"><?php echo $tweet; ?></div>
+<a href="https://twitter.com/dvegabooks">
+    <i class="fa fa-twitter fa-3x"></i><div class="tweet"><?php echo $tweet; ?></div>
+</a> 
