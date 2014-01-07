@@ -72,6 +72,7 @@
         <div class="col-md-4"></div>
         <div class="col-md-8">
             <?php include_once('inc/last_tweet.php'); ?>
+            <br />
             <?php include_once('inc/twitter_follow.php'); ?>
         </div>
     </div>

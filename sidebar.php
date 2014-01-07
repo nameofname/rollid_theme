@@ -14,7 +14,7 @@ if (!is_page('home')) {
 
     include_once(THEME_ROOT . '/inc/last_tweet.php');
 
-    echo '<br /><br />';
+    echo '<br />';
 
     include(THEME_ROOT . '/inc/twitter_follow.php');
 

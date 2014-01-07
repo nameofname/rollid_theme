@@ -102,3 +102,13 @@
 .twitter-follow-button {
     opacity: 0;
 }
+
+a.tweet_link {
+    color: black; 
+}
+
+a.tweet_link:hover {
+    color : #F50C75;
+    text-decoration: none; 
+}
+
