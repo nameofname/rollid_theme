@@ -18,6 +18,8 @@ if (!is_page('home')) {
 
     include(THEME_ROOT . '/inc/twitter_follow.php');
 
+    include(THEME_ROOT . '/inc/sidebar_posts.php');
+
 }
 
 ?>

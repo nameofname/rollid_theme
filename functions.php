@@ -74,3 +74,27 @@ EOT;
 if ($pagenow === 'post.php') {
     add_sidebar_metabox();
 }
+
+/**
+ * Gets an array of all posts that are tagged with the custom meta attribute "put_in_sidebar"
+ * @return mixed
+ */
+function get_sidebar_posts () {
+    global $wpdb;
+
+    // INNER JOIN wp_postmeta to wp_posts
+    $query = "select
+            p.*
+        from
+            wp_postmeta m
+        inner join	wp_posts p
+        on
+            p.ID = m.post_id
+        where
+            m.meta_key = 'put_in_sidebar';
+        ";
+
+    $rows = $wpdb->get_results($query);
+    return $rows;
+}
+
