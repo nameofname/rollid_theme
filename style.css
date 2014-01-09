@@ -112,3 +112,6 @@ a.tweet_link:hover {
     text-decoration: none; 
 }
 
+#sidebar_posts {
+    list-style: none;
+}
