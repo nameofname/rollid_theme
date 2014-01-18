@@ -8,7 +8,7 @@
             <?php get_sidebar(); ?>
         </div>
 
-        <div class="col-md-9 col-sm-9 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12">
 
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -43,6 +43,10 @@
 
             <?php comments_template(); ?>
 
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- Placeholder container to make blog thinner... -->
         </div>
 
     </div>
