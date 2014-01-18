@@ -43,17 +43,22 @@ function add_sidebar_metabox () {
     function sidebar_metabox_html ($post) {
         $id = $post->ID;
         $curr_val = get_post_meta($id, 'put_in_sidebar', true);
+        $curr_title = get_option('sidebar_title');
 
         $in_sidebar = ($curr_val === 'true') ? "checked='true' " : '';
         $not_in_sidebar = ($curr_val === 'true') ? '' : "checked='true' " ;
 
 $str = <<<EOT
+        <div>
         <label for="sidebar">Yes
             <input name='sidebar' value='true' type='radio' $in_sidebar/>
         </label>
         <label for="sidebar">No
             <input name='sidebar' value='false' type='radio' $not_in_sidebar/>
         </label>
+        </div>
+        <label>Enter the name of your sidebar's title:</label>
+        <input name="title" type="text" value="$curr_title" />
 EOT;
         echo $str;
         return $str;
@@ -64,8 +69,14 @@ EOT;
 
         // Get the post data from the field named "sidebar" I defined:
         $val = $_POST['sidebar'];
+        $new_title = $_POST['title'];
 
+        // Update the metadata for this post re: whether or not it is in the sidebar:
         update_post_meta($post_id, 'put_in_sidebar', $val);
+
+        // Update the option for the sidebar title:
+        add_option('sidebar_title');
+        update_option('sidebar_title', $new_title);
     }
 }
 

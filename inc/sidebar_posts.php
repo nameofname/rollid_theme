@@ -1,6 +1,6 @@
 <br />
 <br />
-<p class="lead">A Special Title that Danielle made up</p>
+<p class="lead"><?= get_option('sidebar_title'); ?></p>
 <ul id='sidebar_posts'>
 <?php
 
