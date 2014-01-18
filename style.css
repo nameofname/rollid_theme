@@ -3,13 +3,18 @@
 }
 
 #sidebar {
-    list-style: none;
-    font-size: 40px;
-    font-weight: bolder;
     text-align: right;
 }
 
-#home #sidebar {
+#sidebar-nav {
+    list-style: none;
+    font-size: 40px;
+    font-weight: bolder;
+    padding-left : 0px;
+    margin-bottom: 40px;
+}
+
+#home #sidebar-nav {
     line-height: 84px;
 }
 
@@ -21,9 +26,6 @@
     line-height: 100px;
     font-weight: bolder;
 }
-
-/*#home [class*='col-'] {*/
-/*}*/
 
 .line {
     display: flex;
@@ -40,21 +42,23 @@
 
 
 /* On the home page, move the sidebar links closer to the text */
-#home #sidebar {
+#home #sidebar-nav {
     position: relative;
     font-size: 60px;
     -webkit-padding-start: 0px;
 }
 
-#sidebar a {
+#sidebar-nav a,
+#sidebar_posts li a {
     color: black;
 }
 
-#sidebar li.current_page_item a {
+#sidebar-nav li.current_page_item a {
     color: #F50C75;
 }
 
-#sidebar a:hover {
+#sidebar-nav a:hover,
+#sidebar_posts li a:hover {
     text-decoration: none;
     color: #F50C75;
 }
@@ -104,14 +108,20 @@
 }
 
 a.tweet_link {
-    color: black; 
+    color: black;
 }
 
 a.tweet_link:hover {
     color : #F50C75;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 #sidebar_posts {
     list-style: none;
+    padding-left: 0px;
 }
+
+#sidebar_posts li {
+    margin-bottom: 10px;
+}
+
