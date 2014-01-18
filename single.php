@@ -8,8 +8,33 @@
             <?php get_sidebar(); ?>
         </div>
 
-        <div class="col-md-9 col-sm-9 col-xs-12">
-            HERE IS WHERE I SHOULD PUT THE POSTS.
+        <div class="col-md-6 col-sm-6 col-xs-12">
+
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+            <h1 class="content-heading"><strong><?php the_title(); ?></strong></h1>
+
+            <div class="content">
+                <?php the_content('Read more &raquo;'); ?>
+
+
+                <?php link_pages('<p><strong>Pages:</strong> ', '</p>', 'number'); ?>
+
+            </div>
+
+        <?php endwhile; ?>
+
+        <?php else: ?>
+
+
+            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+        <?php endif; ?>
+
+
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- Placeholder container to make blog thinner... -->
         </div>
 
     </div>
