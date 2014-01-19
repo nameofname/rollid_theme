@@ -17,9 +17,11 @@
                 <h1 class="content-heading"><strong><?php the_title(); ?></strong></h1>
 
                 <div class="content">
-                    <?php the_excerpt('Read more &raquo;'); ?>
 
-                    <a href="<?php echo get_permalink($id); ?> ">MORE...</a>
+                    <?php the_content('MORE ...'); ?>
+
+<!--                    --><?php //the_excerpt(); ?>
+<!--                    <a href="--><?//= get_permalink($id); ?><!-- ">MORE...</a>-->
 
                     <?php link_pages('<p><strong>Pages:</strong> ', '</p>', 'number'); ?>
 
