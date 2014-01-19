@@ -5,17 +5,21 @@
 <?php if ( $comments ) : ?>
 
 
-    <div class="commentheader">Comments</div>
+    <h2>Comments</h2>
 
     <?php foreach ($comments as $comment) : ?>
 
         <div class="comment">
-            <div class="gravatarside"><?php if (function_exists('get_avatar')) { echo get_avatar($comment,$size='48'); } ?></div>
-            <div class="commenticon">
-                <?php comment_type('Comment','Trackback','Pingback'); ?> from <?php if ('' != get_comment_author_url()) { ?><a href="<?php comment_author_url(); ?>"><?php comment_author() ?></a><?php } else { comment_author(); } ?>
-                <?php edit_comment_link('[e]',' | '); ?> - <?php comment_date() ?> at <?php comment_time(); ?></div>
+            <div><?php if (function_exists('get_avatar')) { echo get_avatar($comment,$size='48'); } ?></div>
+            <br />
 
-            <div class="commenttext"><?php comment_text() ?></div>
+            <blockquote>
+                <?php comment_text() ?>
+                <small>
+                    <?php if ('' != get_comment_author_url()) { ?><a href="<?php comment_author_url(); ?>"><?php comment_author() ?></a><?php } else { comment_author(); } ?>
+                    <?php edit_comment_link('<i class="fa fa-pencil"></i> edit',' | '); ?> <span class="small"> <?php comment_date() ?></span>
+                </small>
+            </blockquote>
 
             <?php if ($comment->comment_approved == '0') : ?>
                 <p>Thank you for your comment! It has been added to the moderation queue and will be published here if approved by the webmaster.</p>
