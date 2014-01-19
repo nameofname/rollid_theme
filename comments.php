@@ -2,10 +2,9 @@
     <p>This page is password protected. Enter your password to continue!</p>
     <?php return; endif; ?>
 
+<div id="comments" class="well">
+
 <?php if ( $comments ) : ?>
-
-
-<div class="well">
     <h2>Comments</h2>
 
     <?php foreach ($comments as $comment) : ?>
@@ -18,7 +17,7 @@
                 <?php comment_text() ?>
                 <small>
                     <?php if ('' != get_comment_author_url()) { ?><a href="<?php comment_author_url(); ?>"><?php comment_author() ?></a><?php } else { comment_author(); } ?>
-                    <?php edit_comment_link('<i class="fa fa-pencil"></i> edit',' | '); ?> <span class="small"> <?php comment_date() ?></span>
+                    <?php edit_comment_link('<i class="fa fa-pencil"></i> edit',''); ?> <span class="small"> <?php comment_date() ?></span>
                 </small>
             </blockquote>
 
@@ -39,7 +38,7 @@
         <form  id="commentform" class="form-horizontal" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 
             <?php if ($user_ID) : ?>
-                <p class="loggedin">You are logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out">Log out</a>.</p>
+                <p class="loggedin">You are logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. </p>
 
             <?php else : ?>
                 <div class="form-group">
@@ -76,7 +75,8 @@
                 <div class="col-sm-offset-2 col-sm-10">
                     <button name="submit" type="submit" class="btn btn-default">Submit</button>
 
-                    <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+                    <input name="comment_post_ID" type="hidden" value="<?php echo $id; ?>" />
+                    <input name="redirect_to" type="hidden" value="<?= $_SERVER['REQUEST_URI'] ?>" />
 
                 </div>
             </div>
@@ -86,5 +86,5 @@
         </form>
 
 <?php endif; ?>
-</div>
 
+</div>
