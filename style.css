@@ -88,9 +88,14 @@
     margin-bottom: 50px;
 }
 
-.content-heading {
+.blog-title,
+.blog-title a{
     color: #ccc;
     margin-bottom: 20px;
+}
+
+.blog-title a:hover {
+    color: #F50C75;
 }
 
 .no-margin-top {

@@ -42,14 +42,14 @@
 
             <?php else : ?>
                 <div class="form-group">
-                    <label for="author" class="col-sm-2 control-label">Name:</label>
+                    <label for="author" class="col-sm-2 control-label">*Name:</label>
                     <div class="col-sm-10">
                         <input name="author" class="form-control" type="text" value="<?php echo $comment_author; ?>" tabindex="1" /><br/><br/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email" class="col-sm-2 control-label">Email:</label>
+                    <label for="email" class="col-sm-2 control-label">*Email:</label>
                     <div class="col-sm-10">
                         <input name="email" class="form-control" type="text" value="<?php echo $comment_author_email; ?>" tabindex="2" /><br/><br/>
                     </div>

@@ -14,11 +14,13 @@
 
                 <?php $id = get_the_ID(); ?>
 
-                <h1 class="content-heading"><strong><?php the_title(); ?></strong></h1>
+                <h1 class="blog-title"><strong>
+                    <a href="<?= get_permalink($id); ?>"><?php the_title(); ?></a>
+                </strong></h1>
 
                 <div class="content">
 
-                    <?php the_content('MORE ...'); ?>
+                    <?php the_content('MORE...'); ?>
 
 <!--                    --><?php //the_excerpt(); ?>
 <!--                    <a href="--><?//= get_permalink($id); ?><!-- ">MORE...</a>-->
