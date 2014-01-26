@@ -19,10 +19,8 @@
 
                 endwhile;
 
-                // If comments are turned on, or there are comments for this page, then show the comments template:
-                if ( comments_open() || get_comments_number() ) {
-                    comments_template();
-                }
+                // Show the comments template:
+                comments_template();
             ?>
 
         </div>

@@ -20,12 +20,15 @@
 
                 <?php link_pages('<p><strong>Pages:</strong> ', '</p>', 'number'); ?>
 
+                <?php
+                // Show the comments template:
+                comments_template();
+                ?>
             </div>
 
         <?php endwhile; ?>
 
         <?php else: ?>
-
 
             <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>

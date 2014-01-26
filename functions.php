@@ -109,3 +109,12 @@ function get_sidebar_posts () {
     return $rows;
 }
 
+/**
+ * Determine whether posts are open for a given page - in our site we allow comments for all blog posts, but not for
+ * pages:
+ * @param $post
+ * @return bool
+ */
+function my_comments_open($post) {
+    return $post->post_type === 'page' ? false : true;
+}

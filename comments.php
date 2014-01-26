@@ -2,6 +2,7 @@
     <p>This page is password protected. Enter your password to continue!</p>
     <?php return; endif; ?>
 
+<?php if ( my_comments_open($post)) : ?>
 <div id="comments" class="well">
 
 <?php if ( $comments ) : ?>
@@ -88,3 +89,5 @@
 <?php endif; ?>
 
 </div>
+
+<?php endif;  ?>
