@@ -3,11 +3,6 @@
 // DEFINE global variable THEME_ROOT to make requiring files easier:
 define(THEME_ROOT, realpath(__DIR__));
 
-function piss_off() {
-    $out = "this is the output of this functin";
-    echo $out;
-}
-
 /**
  * Register our sidebars and widgetized areas.
  *
@@ -118,3 +113,44 @@ function get_sidebar_posts () {
 function my_comments_open($post) {
     return $post->post_type === 'page' ? false : true;
 }
+
+
+/**
+ * Adds admin menu screen to enter keywords and description:
+ */
+function add_keywords_admin() {
+    add_action( 'admin_menu', function() {
+        add_menu_page( 'custom menu title', 'Meta keywords', 'manage_options', 'keywords_page', function () {
+            require_once(__DIR__ . '/inc/keywords_menu.php');
+        });
+    });
+}
+
+/**
+ * If keywords and description $_POST data was passed, this function will save it.
+ */
+function save_keywords() {
+    $description = $_POST['description'];
+    $keywords = $_POST['keywords'];
+
+    if ($description) {
+        add_option('seo_description', $description, '', 'yes');
+        update_option('seo_description', $description);
+    }
+
+    if ($keywords) {
+        add_option('seo_keywords', $keywords, '', 'yes');
+        update_option('seo_keywords', $keywords);
+    }
+}
+
+// If the user is admin, then add the keywords admin page.
+if (is_admin()) {
+    add_keywords_admin();
+}
+
+// If the user is on the keywords admin page, then get POSTed data and attempt to save it.
+if ($_GET['page'] == 'keywords_page') {
+    save_keywords();
+}
+
