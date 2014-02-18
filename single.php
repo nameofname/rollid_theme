@@ -12,7 +12,7 @@
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-            <h1 class="content-heading"><strong><?php the_title(); ?></strong></h1>
+            <h1 class="blog-title"><strong><?php the_title(); ?></strong></h1>
 
             <div class="content">
                 <?php the_content('Read more &raquo;'); ?>

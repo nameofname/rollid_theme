@@ -58,6 +58,10 @@
     color: #F50C75;
 }
 
+body a:hover {
+    text-decoration: none;
+}
+
 #sidebar-nav a:hover,
 #sidebar_posts li a:hover {
     text-decoration: none;
@@ -91,6 +95,7 @@
 .blog-title,
 .blog-title a{
     color: #ccc;
+    /*color: black;*/
     margin-bottom: 20px;
 }
 
@@ -100,13 +105,6 @@
 
 .no-margin-top {
     margin-top: 0px;
-}
-
-/* Do styling for phones and tables to match the bootstrap break point. Landscape phones and down */
-@media (max-width: 767px) {
-    #sidebar {
-        text-align: left;
-    }
 }
 
 .twitter-follow-button {
@@ -153,5 +151,16 @@
 #comments {
     margin-top: 30px;
     /*background-color: white;*/
+}
+
+
+/* Do styling for phones and tables to match the bootstrap break point. Landscape phones and down */
+@media (max-width: 767px) {
+    #sidebar {
+        text-align: left;
+        border-bottom: 1px dashed black;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
 }
 
