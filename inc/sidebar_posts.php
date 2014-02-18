@@ -1,6 +1,6 @@
-<br />
-<br />
-<p class="lead"><?= get_option('sidebar_title'); ?></p>
+<!--<br />-->
+<!--<br />-->
+<p class="lead"><i><?= get_option('sidebar_title'); ?></i></p>
 <ul id='sidebar_posts'>
 <?php
 

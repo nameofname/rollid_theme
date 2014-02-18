@@ -113,11 +113,30 @@
     opacity: 0;
 }
 
-a.tweet_link {
+.last-tweet {
     color: black;
+    /*height: 100px;*/
+
+    /* Applying flex box styling to get layout right: */
+    display: flex;
+    display: -webkit-flex;
 }
 
-a.tweet_link:hover {
+.last-tweet .last-tweet-left,
+.last-tweet .last-tweet-right {
+    height: 100%;
+    text-align: left;
+}
+
+.last-tweet .last-tweet-left {
+    min-width: 40px;
+}
+
+.last-tweet .last-tweet-right .tweet {
+    margin-bottom: 10px;
+}
+
+.last-tweet:hover {
     color : #F50C75;
     text-decoration: none;
 }

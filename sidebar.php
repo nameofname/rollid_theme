@@ -14,11 +14,11 @@
     // If this is not the home page, then add the last tweet:
     if (!is_page('home')) {
 
+        echo '<hr />';
+
         include_once(THEME_ROOT . '/inc/last_tweet.php');
 
-        echo '<br />';
-
-        include(THEME_ROOT . '/inc/twitter_follow.php');
+        echo '<hr />';
 
         include(THEME_ROOT . '/inc/sidebar_posts.php');
 
