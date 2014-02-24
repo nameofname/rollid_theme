@@ -1,3 +1,14 @@
+html body {
+    font-family: 'Helvetica Neue',Arial,sans-serif;
+    color: #222222;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 16px;
+}
+
 #wrapper {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -90,13 +101,17 @@ body a:hover {
 
 .content {
     margin-bottom: 50px;
+    /*line-height: 1.6em;*/
 }
 
-.blog-title,
-.blog-title a{
-    color: #ccc;
-    /*color: black;*/
+.blog-title a {
+    /*color: #ccc;*/
+    color: black;
+}
+
+.blog-title {
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .blog-title a:hover {
@@ -164,3 +179,15 @@ body a:hover {
     }
 }
 
+/*Styling the previous and next links on the bottom of the blog page: */
+.prevlink i {
+    margin-right : 5px;
+}
+
+.nextlink i {
+    margin-left: 5px;
+}
+
+.navigation .fa-rocket {
+    margin: 0px 15px;
+}
