@@ -10,25 +10,35 @@
 
     <?php foreach ($comments as $comment) : ?>
 
-        <div class="comment">
-            <div><?php if (function_exists('get_avatar')) { echo get_avatar($comment,$size='48'); } ?></div>
-            <br />
+        <?php if ($comment->comment_approved): ?>
 
-            <blockquote>
-                <?php comment_text() ?>
-                <small>
-                    <?php if ('' != get_comment_author_url()) { ?><a href="<?php comment_author_url(); ?>"><?php comment_author() ?></a><?php } else { comment_author(); } ?>
-                    <?php edit_comment_link('<i class="fa fa-pencil"></i> edit',''); ?> <span class="small"> <?php comment_date() ?></span>
-                </small>
-            </blockquote>
+            <div class="comment">
+                <div><?php
+                    if (function_exists('get_avatar')) {
+                        $gravatar = get_avatar($comment, $size=48, '/mc-derple-sha-derple');
+                        $email = $comment->comment_author_email;
+                        if (validate_gravatar($email)) {
+                            echo $gravatar;
+                        }
+                    }
+                    ?>
+                </div>
+                <br />
 
-            <?php if ($comment->comment_approved == '0') : ?>
-                <p>Thank you for your comment! It has been added to the moderation queue and will be published here if approved by the webmaster.</p>
-            <?php endif; ?>
-        </div>
+                <blockquote>
+                    <?php comment_text() ?>
+                    <small>
+                        <?php if ('' != get_comment_author_url()) { ?><a href="<?php comment_author_url(); ?>"><?php comment_author() ?></a><?php } else { comment_author(); } ?>
+                        <?php edit_comment_link('<i class="fa fa-pencil"></i> edit',''); ?> <span class="small"> <?php comment_date() ?></span>
+                    </small>
+                </blockquote>
 
+                <?php if ($comment->comment_approved == '0') : ?>
+                    <p>Thank you for your comment! It has been added to the moderation queue and will be published here if approved by the webmaster.</p>
+                <?php endif; ?>
+            </div>
 
-
+        <?php endif; ?>
     <?php endforeach; ?>
 <?php endif; ?>
 

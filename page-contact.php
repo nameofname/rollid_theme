@@ -17,9 +17,9 @@
 
             echo do_shortcode( '[contact-form-7 id="1429" title="Contact form 1"]' );
 
-            // Note: No content will be displayed on this page:
-//            $page_data = get_page($page_id);
-//            echo $page_data->post_content;
+                // Note: No content will be displayed on this page:
+    //            $page_data = get_page($page_id);
+    //            echo $page_data->post_content;
 
             ?>
 
