@@ -48,8 +48,6 @@
                 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
             <?php endif; ?>
 
-            <?php comments_template(); ?>
-
         </div>
 
         <div class="col-md-4 col-sm-4 col-xs-12">
