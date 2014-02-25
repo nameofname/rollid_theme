@@ -70,11 +70,34 @@ p {
     -webkit-padding-start: 0px;
 }
 
+nav.navbar {
+    display: none;
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.1);
+}
+
+nav.navbar li a {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav.navbar li a:hover {
+    background-color: white;
+    color: #F50C75;
+}
+
+nav.navbar li a,
 #sidebar-nav a,
 #sidebar_posts li a {
     color: black;
 }
 
+nav.navbar li.current_page_item a,
 #sidebar-nav li.current_page_item a {
     color: #F50C75;
 }
@@ -138,11 +161,16 @@ body a:hover {
 
 .last-tweet {
     color: black;
-    /*height: 100px;*/
-
     /* Applying flex box styling to get layout right: */
     display: flex;
     display: -webkit-flex;
+}
+
+#sidebar .last-tweet {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding: 20px 0px;
+    margin-bottom: 20px;
 }
 
 .last-tweet .last-tweet-left,
@@ -186,6 +214,44 @@ body a:hover {
         border-bottom: 1px dashed black;
         padding-bottom: 50px;
         margin-bottom: 50px;
+    }
+
+    /*Show the navbar, hide the sidebar nav: */
+    nav .navbar-nav {
+         margin: 0px 0px;
+    }
+
+    nav.navbar {
+        display: block;
+        margin-bottom: 0px;
+    }
+
+    #sidebar-nav {
+        display: none;
+    }
+
+    #sidebar .last-tweet {
+        border-top: 0px;
+    }
+
+    #wrapper {
+        margin-top: 70px;
+    }
+
+    nav .navbar-nav li {
+        float: left;
+    }
+
+    nav .navbar-nav li a {
+        padding: 7px;
+    }
+
+}
+
+/*Reduce the nav bar font size below 500px to keep everything on 1 line: */
+@media (max-width: 500px) {
+    nav.navbar li a {
+        font-size: 16px;
     }
 }
 

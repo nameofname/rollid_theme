@@ -36,3 +36,16 @@
 </head>
 
 <body>
+<nav class="navbar" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <?php
+                // Page links:
+                echo wp_list_pages('title_li=&depth=1');
+                ?>
+            </ul>
+        </div>
+    </div>
+</nav>
