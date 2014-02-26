@@ -8,9 +8,9 @@
             <?php get_sidebar(); ?>
         </div>
 
-        <div id="page-content" class="col-md-9 col-sm-9 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12">
 
-            <h1 class="no-margin-top">Contact Danielle:
+            <h1 class="blog-title">Contact Danielle:
                 (<span class="magenta "><i class="fa fa-female"></i> <i class="fa fa-plus"></i> <i class="fa fa-envelope"></i></span>)
             </h1>
             <?php
