@@ -41,6 +41,10 @@ p {
     margin-bottom: 0px;
 }
 
+#home-tweet {
+    margin-top: 10px;
+}
+
 /* Home Page text styling: */
 #home-text{
     max-width: 500px;
