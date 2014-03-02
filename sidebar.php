@@ -1,7 +1,13 @@
 <div id="sidebar">
 
-    <ul id="sidebar-nav">
         <?php
+
+        if (!is_page('home')) {
+            echo '<ul id="sidebar-nav">';
+        } else {
+            echo '<ul id="sidebar-nav">';
+        }
+
 
         // Page links:
         echo wp_list_pages('title_li=&depth=1');
@@ -14,11 +20,7 @@
     // If this is not the home page, then add the last tweet:
     if (!is_page('home')) {
 
-//        echo '<hr />';
-
         include_once(THEME_ROOT . '/inc/last_tweet.php');
-
-//        echo '<hr />';
 
         include(THEME_ROOT . '/inc/sidebar_posts.php');
 

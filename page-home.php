@@ -65,17 +65,15 @@
     </div>
 
 
-</div>
-
-<div id="home-tweet" class="container">
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-8">
-            <?php include_once('inc/last_tweet.php'); ?>
-            <br />
-            <?php include_once('inc/twitter_follow.php'); ?>
-        </div>
+    <div id="home-tweet" class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <?php include_once('inc/last_tweet.php'); ?>
+                <br />
+                <?php include_once('inc/twitter_follow.php'); ?>
+            </div>
     </div>
+
 </div>
 
 <?php get_footer(); ?>
