@@ -1,7 +1,7 @@
 <?php
 
 // IMPORTANT : I no longer fetch the last tweet before delivering the page via PHP. Now, for cacheing, I deliver the
-// page, then fetch via ajax. The last tweet is always populated into the .last-tweet .tweet div. 
+// page, then fetch via ajax. The last tweet is always populated into the .last-tweet .tweet div.
 
 // Get the last tweet:
 //require(THEME_ROOT . '/lib/twitter_api.php');
@@ -24,7 +24,9 @@
         </div>
         <div class="last-tweet-right">
             <a target="_blank" href="https://twitter.com/dvegabooks">
-                <div class="tweet"></div>
+                <div class="tweet">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/loader.gif" />
+                </div>
                 <?php include(THEME_ROOT . '/inc/twitter_follow.php'); ?>
             </a>
         </div>
