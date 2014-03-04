@@ -124,7 +124,7 @@ body a:hover {
 
 #home-tweet .fa-twitter, .fa-twitter {
     float: left;
-    margin-right: 15px;
+    /*margin-right: 15px;*/
 }
 
 #home-tweet .tweet {
@@ -186,6 +186,7 @@ body a:hover {
 
 .last-tweet .last-tweet-left {
     min-width: 40px;
+    margin-right: 10px;
 }
 
 .last-tweet .last-tweet-right .tweet {
