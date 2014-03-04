@@ -152,6 +152,12 @@ body a:hover {
     margin-top: 10px;
 }
 
+/*For images at the begging of the page that need to be top-aligned*/
+.page-top-padded {
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
 .blog-title a:hover {
     color: #F50C75;
 }

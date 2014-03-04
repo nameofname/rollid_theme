@@ -9,7 +9,7 @@
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12">
-            <img width='100%' src="<?php bloginfo('template_directory'); ?>/img/not-found.jpg" />
+            <img class='page-top-padded' width='100%' src="<?php bloginfo('template_directory'); ?>/img/not-found.jpg" />
         </div>
 
     </div>
