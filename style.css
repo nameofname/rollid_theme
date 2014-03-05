@@ -263,7 +263,7 @@ body a:hover {
 /*Reduce the nav bar font size below 500px to keep everything on 1 line: */
 @media (max-width: 500px) {
     nav.navbar li a {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
