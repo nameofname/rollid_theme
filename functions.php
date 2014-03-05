@@ -1,7 +1,18 @@
 <?php
-
 // DEFINE global variable THEME_ROOT to make requiring files easier:
 define(THEME_ROOT, realpath(__DIR__));
+
+/**
+ * Figure out the public root of the theme directory (the NON absolute path) -- wordpress uses absolute paths by
+ * default which is super annoying for things like moving your blog EVER to another domain name, and referencing your
+ * stylesheets on a xip.io address...
+ */
+function define_public_root() {
+    // The public root should be defined to be something like "wp-content/themes/rollid_theme"
+    define(PUBLIC_ROOT, '/wp-content/themes/rollid_theme');
+}
+
+define_public_root();
 
 /**
  * Register our sidebars and widgetized areas.

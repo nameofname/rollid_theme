@@ -27,9 +27,9 @@
     <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/styles/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/styles/fa/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo(PUBLIC_ROOT . '/style.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo(PUBLIC_ROOT); ?>/styles/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo(PUBLIC_ROOT); ?>/styles/fa/css/font-awesome.css" />
 
     <!-- wp_head() inserts several script tags. I would love them to be at the end of the document but damn wordpress...-->
     <?php wp_head(); ?>
