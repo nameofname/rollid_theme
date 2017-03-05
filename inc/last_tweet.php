@@ -18,12 +18,12 @@
 
     <div class='last-tweet'>
         <div class="last-tweet-left">
-            <a target="_blank" href="https://twitter.com/dvegabooks">
+            <a target="_blank" href="https://twitter.com/vegarollins">
                 <i class="fa fa-twitter fa-3x"></i>
             </a>
         </div>
         <div class="last-tweet-right">
-            <a target="_blank" href="https://twitter.com/dvegabooks">
+            <a target="_blank" href="https://twitter.com/vegarollins">
                 <div class="tweet">
                     <img src="<?php bloginfo('template_directory'); ?>/img/loader.gif" />
                 </div>

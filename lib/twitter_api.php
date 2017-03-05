@@ -15,7 +15,7 @@ Class Twitter_API {
     private $oauth_token = null;
     private $oauth_token_secret = null;
     private $connection = null;
-    private $screen_name = 'dvegabooks';
+    private $screen_name = 'vegarollins';
 
     // Wordpress DB var names for getting and retreiving bits of data.
     private $var_time = 'tweet_time';
